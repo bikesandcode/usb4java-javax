@@ -629,4 +629,8 @@ public abstract class AbstractDevice implements UsbDevice
     {
         return this.id.toString();
     }
+    
+    public final String shortToString(){
+    	return String.format("%s:%s", this.id.getIdVendor(), this.id.getIdProduct());
+    }
 }
