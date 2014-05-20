@@ -16,7 +16,7 @@ import org.usb4java.javax.descriptors.SimpleUsbDeviceDescriptor;
  * 
  * @author Klaus Reimer (k@ailis.de)
  */
-public final class DeviceId implements Serializable
+public final class DeviceId implements HandyDeviceId,Serializable
 {
     /** The serial versionUID. */
     private static final long serialVersionUID = 1L;
@@ -131,10 +131,12 @@ public final class DeviceId implements Serializable
             this.deviceDescriptor.idProduct());
     }
     
+    @Override
     public String getIdProduct(){
     	return String.format("%04x", this.deviceDescriptor.idProduct());
     }
     
+    @Override
     public String getIdVendor(){
     	return String.format("%04x", this.deviceDescriptor.idVendor());
     }

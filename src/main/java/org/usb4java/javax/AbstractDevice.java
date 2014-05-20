@@ -41,7 +41,7 @@ import org.usb4java.javax.descriptors.SimpleUsbStringDescriptor;
  * 
  * @author Klaus Reimer (k@ailis.de)
  */
-public abstract class AbstractDevice implements UsbDevice
+public abstract class AbstractDevice implements UsbDevice, HasDeviceId
 {
     /** The USB device manager. */
     private final DeviceManager manager;
